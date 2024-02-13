@@ -9,11 +9,16 @@ export class ShoppingListService {
   ];
 
   getIngredients() {
-    return [...this.ingredients];
+    return this.ingredients.slice();
   }
 
   addIngredient(i: Ingredient) {
     this.ingredients.push(i);
-    this.ingredintsChanged.emit(this.ingredients);
+    this.ingredintsChanged.emit(this.ingredients.slice());
+  }
+
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients = [...this.ingredients, ...ingredients];
+    this.ingredintsChanged.emit(this.ingredients.slice());
   }
 }
