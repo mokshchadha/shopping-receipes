@@ -15,8 +15,8 @@ export class RecipeService {
       []
     ),
     new Recipe(
-      'test',
-      'A test recipei',
+      'test number 2',
+      'A test another recipe',
       'https://cdn.loveandlemons.com/wp-content/uploads/2020/03/pantry-recipes-2.jpg',
       []
     ),
